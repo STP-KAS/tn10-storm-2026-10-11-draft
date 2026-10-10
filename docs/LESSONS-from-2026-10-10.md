@@ -28,7 +28,7 @@ Filled after END (04:30 CEST Sun 11 Oct / 02:30 UTC) and the chain count (to 06:
 - [ ] **Build's desk node:** lag, freezes, RAM, time on the public fallback. Is the desk node fit for 75% again, or does the split change?
 - [ ] **Rates:** was MAX (3,500) clean? Was HOLD (3,200) held? Change targets for 11 Oct only if run 2026-10-10 shows a clear reason.
 - [ ] **Fees:** did 400/600 hold with no sit-outs? Did any node quote above 400?
-- [ ] **Coins:** tKAS used vs planned (bot about 58,000 tKAS of fees planned); size the 11 Oct fill.
+- [ ] **Coins:** tKAS used vs planned (bot about 64,000 tKAS of fees planned after the +10%); size the 11 Oct fill.
 - [ ] **Disk and RAM on the box:** free disk at END; is there room for another 8 hours before G1 (11:30 CEST)?
 - [ ] **Logging:** did the live summary, the counting from per-second files and the chain count work? Fix any column that was empty.
 - [ ] **Kaspa Pulse's count** of run 2026-10-10, if he sends one: what to change.

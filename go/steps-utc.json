@@ -16,10 +16,12 @@
  },
  "split": {
   "bot": 0.25,
-  "build": 0.75
+  "build": 0.75,
+  "bot_factor": 1.1,
+  "note": "stp 10 Oct 19:03 CEST: bot rates x1.1, Build unchanged"
  },
  "success_network_unique_accepted_tx_s": 3000,
- "hold_rule": "Each side holds its HOLD rate if its MAX step was clean; otherwise its highest clean step rate (bot: 60 if none; Build: 190 if none).",
+ "hold_rule": "Each side holds its HOLD rate if its MAX step was clean; otherwise its highest clean step rate (bot: 66 if none; Build: 190 if none).",
  "steps": [
   {
    "step": "PREP",
@@ -75,10 +77,10 @@
    "start": "2026-10-11T10:10:00Z",
    "end": "2026-10-11T10:25:00Z",
    "drain_end": "2026-10-11T10:30:00Z",
-   "bot_tx_s": 60,
+   "bot_tx_s": 66,
    "build_tx_s": 190,
-   "combined_tx_s": 250,
-   "bot": "60",
+   "combined_tx_s": 256,
+   "bot": "66",
    "build": "190"
   },
   {
@@ -87,10 +89,10 @@
    "start": "2026-10-11T10:30:00Z",
    "end": "2026-10-11T10:45:00Z",
    "drain_end": "2026-10-11T10:50:00Z",
-   "bot_tx_s": 250,
+   "bot_tx_s": 275,
    "build_tx_s": 750,
-   "combined_tx_s": 1000,
-   "bot": "250",
+   "combined_tx_s": 1025,
+   "bot": "275",
    "build": "750"
   },
   {
@@ -99,10 +101,10 @@
    "start": "2026-10-11T10:50:00Z",
    "end": "2026-10-11T11:05:00Z",
    "drain_end": "2026-10-11T11:10:00Z",
-   "bot_tx_s": 375,
+   "bot_tx_s": 413,
    "build_tx_s": 1125,
-   "combined_tx_s": 1500,
-   "bot": "375",
+   "combined_tx_s": 1538,
+   "bot": "413",
    "build": "1,125"
   },
   {
@@ -111,10 +113,10 @@
    "start": "2026-10-11T11:10:00Z",
    "end": "2026-10-11T11:25:00Z",
    "drain_end": "2026-10-11T11:30:00Z",
-   "bot_tx_s": 500,
+   "bot_tx_s": 550,
    "build_tx_s": 1500,
-   "combined_tx_s": 2000,
-   "bot": "500",
+   "combined_tx_s": 2050,
+   "bot": "550",
    "build": "1,500"
   },
   {
@@ -123,10 +125,10 @@
    "start": "2026-10-11T11:30:00Z",
    "end": "2026-10-11T11:45:00Z",
    "drain_end": "2026-10-11T11:50:00Z",
-   "bot_tx_s": 625,
+   "bot_tx_s": 688,
    "build_tx_s": 1875,
-   "combined_tx_s": 2500,
-   "bot": "625",
+   "combined_tx_s": 2563,
+   "bot": "688",
    "build": "1,875"
   },
   {
@@ -135,10 +137,10 @@
    "start": "2026-10-11T11:50:00Z",
    "end": "2026-10-11T12:05:00Z",
    "drain_end": "2026-10-11T12:10:00Z",
-   "bot_tx_s": 900,
+   "bot_tx_s": 990,
    "build_tx_s": 2600,
-   "combined_tx_s": 3500,
-   "bot": "900",
+   "combined_tx_s": 3590,
+   "bot": "990",
    "build": "2,600 (may go above, never below)"
   },
   {
@@ -159,10 +161,10 @@
    "start": "2026-10-11T12:20:00Z",
    "end": "2026-10-11T17:45:00Z",
    "drain_end": null,
-   "bot_tx_s": 800,
+   "bot_tx_s": 880,
    "build_tx_s": 2400,
-   "combined_tx_s": 3200,
-   "bot": "800 (see the hold rule)",
+   "combined_tx_s": 3280,
+   "bot": "880 (see the hold rule)",
    "build": "2,400 (see the hold rule)"
   },
   {

@@ -21,14 +21,14 @@ STEPS = [
     ("G1", "gate", -30, None, None, 0, 0, "Gate 1: n2 health, coin buffer, the five public nodes reachable. Logging starts.", "Gate 1: desk node health, RAM >= 4 GB free, public fallback reachable, coins, disk. Logging starts. Stop every sender not in this plan."),
     ("G2", "gate", -15, None, None, 0, 0, "Gate 2, **ready check**: BUILD-OK from stp (Build has started). Miner on.", "Gate 2, **ready check**: write `FOR-TN10-OPS-ready-1011.txt` with `BUILD-OK`, stp passes it to the bot. Miner on."),
     ("B0", "baseline", 0, 10, None, 0, 0, "**T0.** No load. Miner on.", "**T0.** No load. Miner on."),
-    ("X250", "step", 10, 25, 30, 60, 190, "60", "190"),
-    ("C1000", "step", 30, 45, 50, 250, 750, "250", "750"),
-    ("C1500", "step", 50, 65, 70, 375, 1125, "375", "1,125"),
-    ("C2000", "step", 70, 85, 90, 500, 1500, "500", "1,500"),
-    ("C2500", "step", 90, 105, 110, 625, 1875, "625", "1,875"),
-    ("MAX", "step", 110, 125, 130, 900, 2600, "900", "2,600 (may go above, never below)"),
+    ("X250", "step", 10, 25, 30, 66, 190, "66", "190"),
+    ("C1000", "step", 30, 45, 50, 275, 750, "275", "750"),
+    ("C1500", "step", 50, 65, 70, 413, 1125, "413", "1,125"),
+    ("C2000", "step", 70, 85, 90, 550, 1500, "550", "1,500"),
+    ("C2500", "step", 90, 105, 110, 688, 1875, "688", "1,875"),
+    ("MAX", "step", 110, 125, 130, 990, 2600, "990", "2,600 (may go above, never below)"),
     ("B1", "baseline", 130, 140, None, 0, 0, "No load", "No load"),
-    ("HOLD", "hold", 140, 465, None, 800, 2400, "800 (see the hold rule)", "2,400 (see the hold rule)"),
+    ("HOLD", "hold", 140, 465, None, 880, 2400, "880 (see the hold rule)", "2,400 (see the hold rule)"),
     ("DRAIN", "drain", 465, 480, None, 0, 0, "Senders 0", "Senders 0"),
     ("END", "end", 480, None, None, 0, 0, "Senders stop. Miner off. Live loggers stop.", "Senders stop. Miner off. Live loggers stop. Node stays up."),
     ("COUNT", "count", 480, 600, None, 0, 0, "Chain count from n2, before pruning", "Chain count from your desk node, before pruning"),
@@ -76,12 +76,12 @@ def header():
             "Every time is in [Key times](#key-times) and the [Timeline](#timeline). Do not send before X250. Do not move T0.")
 
 def targets():
-    rows = ["| Step | Brussels (CEST) | UTC | Combined | Bot (25%) | Build (75%) |", "|---|---|---|---|---|---|"]
+    rows = ["| Step | Brussels (CEST) | UTC | Combined | Bot (25% base +10%) | Build (75% base) |", "|---|---|---|---|---|---|"]
     for sid, kind, s, e, dr, bot, build, bt, bdt in STEPS:
         if kind in ("step", "hold"):
             rows.append(f"| {sid} | {at(s, LOCAL)}–{at(e, LOCAL)} | {at(s)}–{at(e)} | {bot + build:,} | {bot:,} | {build:,} |")
     return "\n".join(rows + ["",
-        f"Fees, both sides: half the lanes at **{FEE_LOW}** and half at **{FEE_HIGH}** sompi/gram, frozen per step. Floor {FEE_FLOOR}, cap {FEE_CAP}. "
+        f"Bot rates +10% (stp 10 Oct 19:03 CEST); Build unchanged; step labels kept as names. Fees, both sides: half the lanes at **{FEE_LOW}** and half at **{FEE_HIGH}** sompi/gram, frozen per step. Floor {FEE_FLOOR}, cap {FEE_CAP}. "
         f"Success line: network unique accepted at or above **{SUCCESS_TX_S:,} tx/s**, median of a step's valid minutes, at least 10 valid minutes, counted once from chain data."])
 
 BLOCKS = {"table": table(), "key": key(), "header": header(), "targets": targets()}
@@ -99,7 +99,7 @@ steps = [{"step": sid, "kind": kind, "start": iso(s), "end": iso(e), "drain_end"
     "name": "tn10-run-2026-10-11 bot run + build run (DRAFT)", "t0": iso(0), "end": iso(END), "gate1": iso(G1), "gate2": iso(G2),
     "miners": {"on": iso(G2), "off": iso(END)},
     "fees": {"low": FEE_LOW, "high": FEE_HIGH, "cap": FEE_CAP, "floor": FEE_FLOOR},
-    "split": {"bot": 0.25, "build": 0.75}, "success_network_unique_accepted_tx_s": SUCCESS_TX_S,
-    "hold_rule": "Each side holds its HOLD rate if its MAX step was clean; otherwise its highest clean step rate (bot: 60 if none; Build: 190 if none).",
+    "split": {"bot": 0.25, "build": 0.75, "bot_factor": 1.1, "note": "stp 10 Oct 19:03 CEST: bot rates x1.1, Build unchanged"}, "success_network_unique_accepted_tx_s": SUCCESS_TX_S,
+    "hold_rule": "Each side holds its HOLD rate if its MAX step was clean; otherwise its highest clean step rate (bot: 66 if none; Build: 190 if none).",
     "steps": steps}, indent=1, ensure_ascii=False) + "\n")
 print("T0", iso(0), "END", iso(END))

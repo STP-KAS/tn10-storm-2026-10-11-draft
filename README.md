@@ -40,7 +40,7 @@
 
 ## Intro
 
-**What.** One TN10 storm on Sunday, 11 Oct 2026, 12:00 to 20:00 CEST, by two sides on one clock. The **bot run** (TN10 ops, with tn ops2, on the box) submits **only to the five public TN10 nodes**; its private node n2 is for reads, coins, the chain count and its miner. The **build run** (Grok Build on stp's desk) sends to **its own desk node**, with the five public nodes as **fallback only**. Split **25% bot, 75% Build**; goal **over 3,000 tx/s combined**, network unique accepted, counted once.
+**What.** One TN10 storm on Sunday, 11 Oct 2026, 12:00 to 20:00 CEST, by two sides on one clock. The **bot run** (TN10 ops, with tn ops2, on the box) submits **only to the five public TN10 nodes**; its private node n2 is for reads, coins, the chain count and its miner. The **build run** (Grok Build on stp's desk) sends to **its own desk node**, with the five public nodes as **fallback only**. Split **25% bot, 75% Build**, with the bot's rates +10% since 19:03 CEST (Build unchanged); goal **over 3,000 tx/s combined**, network unique accepted, counted once.
 
 **Why.** It is the same plan as run 2026-10-10 (T0 20:30 CEST Sat), moved to daylight and to a fresh day, so the lessons of 10 Oct can go in before it starts. On 10 Oct the bot alone reached about 3,168 tx/s submitted on the public nodes in the afternoon test, and Build pushed over 3,000 tx/s from its desk the week before. Details: [docs/LESSONS-from-2026-10-10.md](docs/LESSONS-from-2026-10-10.md).
 
@@ -75,18 +75,20 @@
 | Suggested window for Kaspa Pulse's counter | 11:40–20:05 | 09:40–18:05 |
 <!-- /clock:key -->
 
-<!-- clock:targets -->
-| Step | Brussels (CEST) | UTC | Combined | Bot (25%) | Build (75%) |
-|---|---|---|---|---|---|
-| X250 | 12:10–12:25 | 10:10–10:25 | 250 | 60 | 190 |
-| C1000 | 12:30–12:45 | 10:30–10:45 | 1,000 | 250 | 750 |
-| C1500 | 12:50–13:05 | 10:50–11:05 | 1,500 | 375 | 1,125 |
-| C2000 | 13:10–13:25 | 11:10–11:25 | 2,000 | 500 | 1,500 |
-| C2500 | 13:30–13:45 | 11:30–11:45 | 2,500 | 625 | 1,875 |
-| MAX | 13:50–14:05 | 11:50–12:05 | 3,500 | 900 | 2,600 |
-| HOLD | 14:20–19:45 | 12:20–17:45 | 3,200 | 800 | 2,400 |
+**Change 10 Oct 2026, 19:03 CEST (stp): bot rates +10%.** Bot column ×1.1 (X250 60→66, C1000 250→275, C1500 375→413, C2000 500→550, C2500 625→688, MAX 900→990, HOLD 800→880; bot fallback hold 60→66). Build rates unchanged. Combined targets rise to 256, 1,025, 1,538, 2,050, 2,563, 3,590 and 3,280; step labels (X250, C1000 …) are kept as names.
 
-Fees, both sides: half the lanes at **400** and half at **600** sompi/gram, frozen per step. Floor 100, cap 600. Success line: network unique accepted at or above **3,000 tx/s**, median of a step's valid minutes, at least 10 valid minutes, counted once from chain data.
+<!-- clock:targets -->
+| Step | Brussels (CEST) | UTC | Combined | Bot (25% base +10%) | Build (75% base) |
+|---|---|---|---|---|---|
+| X250 | 12:10–12:25 | 10:10–10:25 | 256 | 66 | 190 |
+| C1000 | 12:30–12:45 | 10:30–10:45 | 1,025 | 275 | 750 |
+| C1500 | 12:50–13:05 | 10:50–11:05 | 1,538 | 413 | 1,125 |
+| C2000 | 13:10–13:25 | 11:10–11:25 | 2,050 | 550 | 1,500 |
+| C2500 | 13:30–13:45 | 11:30–11:45 | 2,563 | 688 | 1,875 |
+| MAX | 13:50–14:05 | 11:50–12:05 | 3,590 | 990 | 2,600 |
+| HOLD | 14:20–19:45 | 12:20–17:45 | 3,280 | 880 | 2,400 |
+
+Bot rates +10% (stp 10 Oct 19:03 CEST); Build unchanged; step labels kept as names. Fees, both sides: half the lanes at **400** and half at **600** sompi/gram, frozen per step. Floor 100, cap 600. Success line: network unique accepted at or above **3,000 tx/s**, median of a step's valid minutes, at least 10 valid minutes, counted once from chain data.
 <!-- /clock:targets -->
 
 ### Highlights

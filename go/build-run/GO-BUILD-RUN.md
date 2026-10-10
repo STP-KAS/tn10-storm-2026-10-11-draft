@@ -44,20 +44,20 @@ On 10 Oct the 17:00 CEST run was halted by stp at 17:39 CEST because Build had n
 
 ## Your rates
 
-Send the **Build** column. Never raise your rate mid-step to cover a bot shortfall. At MAX you may go above 2,600, never below. Use as many senders as you need; a fixed number, started once, not respawned in a loop.
+Send the **Build** column. **Change 10 Oct 2026, 19:03 CEST (stp): bot rates +10%.** Bot column ×1.1 (X250 60→66, C1000 250→275, C1500 375→413, C2000 500→550, C2500 625→688, MAX 900→990, HOLD 800→880; bot fallback hold 60→66). Build rates unchanged. Combined targets rise to 256, 1,025, 1,538, 2,050, 2,563, 3,590 and 3,280; step labels (X250, C1000 …) are kept as names. Your column does not change. Never raise your rate mid-step to cover a bot shortfall. At MAX you may go above 2,600, never below. Use as many senders as you need; a fixed number, started once, not respawned in a loop.
 
 <!-- clock:targets -->
-| Step | Brussels (CEST) | UTC | Combined | Bot (25%) | Build (75%) |
+| Step | Brussels (CEST) | UTC | Combined | Bot (25% base +10%) | Build (75% base) |
 |---|---|---|---|---|---|
-| X250 | 12:10–12:25 | 10:10–10:25 | 250 | 60 | 190 |
-| C1000 | 12:30–12:45 | 10:30–10:45 | 1,000 | 250 | 750 |
-| C1500 | 12:50–13:05 | 10:50–11:05 | 1,500 | 375 | 1,125 |
-| C2000 | 13:10–13:25 | 11:10–11:25 | 2,000 | 500 | 1,500 |
-| C2500 | 13:30–13:45 | 11:30–11:45 | 2,500 | 625 | 1,875 |
-| MAX | 13:50–14:05 | 11:50–12:05 | 3,500 | 900 | 2,600 |
-| HOLD | 14:20–19:45 | 12:20–17:45 | 3,200 | 800 | 2,400 |
+| X250 | 12:10–12:25 | 10:10–10:25 | 256 | 66 | 190 |
+| C1000 | 12:30–12:45 | 10:30–10:45 | 1,025 | 275 | 750 |
+| C1500 | 12:50–13:05 | 10:50–11:05 | 1,538 | 413 | 1,125 |
+| C2000 | 13:10–13:25 | 11:10–11:25 | 2,050 | 550 | 1,500 |
+| C2500 | 13:30–13:45 | 11:30–11:45 | 2,563 | 688 | 1,875 |
+| MAX | 13:50–14:05 | 11:50–12:05 | 3,590 | 990 | 2,600 |
+| HOLD | 14:20–19:45 | 12:20–17:45 | 3,280 | 880 | 2,400 |
 
-Fees, both sides: half the lanes at **400** and half at **600** sompi/gram, frozen per step. Floor 100, cap 600. Success line: network unique accepted at or above **3,000 tx/s**, median of a step's valid minutes, at least 10 valid minutes, counted once from chain data.
+Bot rates +10% (stp 10 Oct 19:03 CEST); Build unchanged; step labels kept as names. Fees, both sides: half the lanes at **400** and half at **600** sompi/gram, frozen per step. Floor 100, cap 600. Success line: network unique accepted at or above **3,000 tx/s**, median of a step's valid minutes, at least 10 valid minutes, counted once from chain data.
 <!-- /clock:targets -->
 
 - **Hold rule:** hold 2,400 if your MAX step was clean; otherwise hold your highest clean step rate (190 if none).
@@ -121,14 +121,14 @@ Brussels is UTC+2. Clocks in git stay in UTC.
 | G1 | 11:30 | 09:30 | Gate 1: n2 health, coin buffer, the five public nodes reachable. Logging starts. | Gate 1: desk node health, RAM >= 4 GB free, public fallback reachable, coins, disk. Logging starts. Stop every sender not in this plan. | – |
 | G2 | 11:45 | 09:45 | Gate 2, **ready check**: BUILD-OK from stp (Build has started). Miner on. | Gate 2, **ready check**: write `FOR-TN10-OPS-ready-1011.txt` with `BUILD-OK`, stp passes it to the bot. Miner on. | – |
 | **B0** | 12:00–12:10 | 10:00–10:10 | **T0.** No load. Miner on. | **T0.** No load. Miner on. | 0 |
-| X250 | 12:10–12:25, drain to 12:30 | 10:10–10:25, drain to 10:30 | 60 | 190 | 250 |
-| C1000 | 12:30–12:45, drain to 12:50 | 10:30–10:45, drain to 10:50 | 250 | 750 | 1,000 |
-| C1500 | 12:50–13:05, drain to 13:10 | 10:50–11:05, drain to 11:10 | 375 | 1,125 | 1,500 |
-| C2000 | 13:10–13:25, drain to 13:30 | 11:10–11:25, drain to 11:30 | 500 | 1,500 | 2,000 |
-| C2500 | 13:30–13:45, drain to 13:50 | 11:30–11:45, drain to 11:50 | 625 | 1,875 | 2,500 |
-| **MAX** | 13:50–14:05, drain to 14:10 | 11:50–12:05, drain to 12:10 | 900 | 2,600 (may go above, never below) | 3,500 |
+| X250 | 12:10–12:25, drain to 12:30 | 10:10–10:25, drain to 10:30 | 66 | 190 | 256 |
+| C1000 | 12:30–12:45, drain to 12:50 | 10:30–10:45, drain to 10:50 | 275 | 750 | 1,025 |
+| C1500 | 12:50–13:05, drain to 13:10 | 10:50–11:05, drain to 11:10 | 413 | 1,125 | 1,538 |
+| C2000 | 13:10–13:25, drain to 13:30 | 11:10–11:25, drain to 11:30 | 550 | 1,500 | 2,050 |
+| C2500 | 13:30–13:45, drain to 13:50 | 11:30–11:45, drain to 11:50 | 688 | 1,875 | 2,563 |
+| **MAX** | 13:50–14:05, drain to 14:10 | 11:50–12:05, drain to 12:10 | 990 | 2,600 (may go above, never below) | 3,590 |
 | B1 | 14:10–14:20 | 12:10–12:20 | No load | No load | 0 |
-| **HOLD** | 14:20–19:45 | 12:20–17:45 | 800 (see the hold rule) | 2,400 (see the hold rule) | 3,200 |
+| **HOLD** | 14:20–19:45 | 12:20–17:45 | 880 (see the hold rule) | 2,400 (see the hold rule) | 3,280 |
 | DRAIN | 19:45–20:00 | 17:45–18:00 | Senders 0 | Senders 0 | 0 |
 | **END** | 20:00 | 18:00 | Senders stop. Miner off. Live loggers stop. | Senders stop. Miner off. Live loggers stop. Node stays up. | – |
 | COUNT | 20:00–22:00 | 18:00–20:00 | Chain count from n2, before pruning | Chain count from your desk node, before pruning | – |

@@ -1,0 +1,217 @@
+{
+ "name": "tn10-run-2026-10-11 bot run + build run (DRAFT)",
+ "t0": "2026-10-11T10:00:00Z",
+ "end": "2026-10-11T18:00:00Z",
+ "gate1": "2026-10-11T09:30:00Z",
+ "gate2": "2026-10-11T09:45:00Z",
+ "miners": {
+  "on": "2026-10-11T09:45:00Z",
+  "off": "2026-10-11T18:00:00Z"
+ },
+ "fees": {
+  "low": 400,
+  "high": 600,
+  "cap": 600,
+  "floor": 100
+ },
+ "split": {
+  "bot": 0.25,
+  "build": 0.75
+ },
+ "success_network_unique_accepted_tx_s": 3000,
+ "hold_rule": "Each side holds its HOLD rate if its MAX step was clean; otherwise its highest clean step rate (bot: 60 if none; Build: 190 if none).",
+ "steps": [
+  {
+   "step": "PREP",
+   "kind": "prep",
+   "start": null,
+   "end": "2026-10-11T09:30:00Z",
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Fresh scheduler armed. n2 synced (reads only). Coins topped up. No sends. Miner off.",
+   "build": "Read this file. Desk node synced with UTXO index, coins, senders, public fallback. No sends. Miner off."
+  },
+  {
+   "step": "G1",
+   "kind": "gate",
+   "start": "2026-10-11T09:30:00Z",
+   "end": null,
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Gate 1: n2 health, coin buffer, the five public nodes reachable. Logging starts.",
+   "build": "Gate 1: desk node health, RAM >= 4 GB free, public fallback reachable, coins, disk. Logging starts. Stop every sender not in this plan."
+  },
+  {
+   "step": "G2",
+   "kind": "gate",
+   "start": "2026-10-11T09:45:00Z",
+   "end": null,
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Gate 2, **ready check**: BUILD-OK from stp (Build has started). Miner on.",
+   "build": "Gate 2, **ready check**: write `FOR-TN10-OPS-ready-1011.txt` with `BUILD-OK`, stp passes it to the bot. Miner on."
+  },
+  {
+   "step": "B0",
+   "kind": "baseline",
+   "start": "2026-10-11T10:00:00Z",
+   "end": "2026-10-11T10:10:00Z",
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "**T0.** No load. Miner on.",
+   "build": "**T0.** No load. Miner on."
+  },
+  {
+   "step": "X250",
+   "kind": "step",
+   "start": "2026-10-11T10:10:00Z",
+   "end": "2026-10-11T10:25:00Z",
+   "drain_end": "2026-10-11T10:30:00Z",
+   "bot_tx_s": 60,
+   "build_tx_s": 190,
+   "combined_tx_s": 250,
+   "bot": "60",
+   "build": "190"
+  },
+  {
+   "step": "C1000",
+   "kind": "step",
+   "start": "2026-10-11T10:30:00Z",
+   "end": "2026-10-11T10:45:00Z",
+   "drain_end": "2026-10-11T10:50:00Z",
+   "bot_tx_s": 250,
+   "build_tx_s": 750,
+   "combined_tx_s": 1000,
+   "bot": "250",
+   "build": "750"
+  },
+  {
+   "step": "C1500",
+   "kind": "step",
+   "start": "2026-10-11T10:50:00Z",
+   "end": "2026-10-11T11:05:00Z",
+   "drain_end": "2026-10-11T11:10:00Z",
+   "bot_tx_s": 375,
+   "build_tx_s": 1125,
+   "combined_tx_s": 1500,
+   "bot": "375",
+   "build": "1,125"
+  },
+  {
+   "step": "C2000",
+   "kind": "step",
+   "start": "2026-10-11T11:10:00Z",
+   "end": "2026-10-11T11:25:00Z",
+   "drain_end": "2026-10-11T11:30:00Z",
+   "bot_tx_s": 500,
+   "build_tx_s": 1500,
+   "combined_tx_s": 2000,
+   "bot": "500",
+   "build": "1,500"
+  },
+  {
+   "step": "C2500",
+   "kind": "step",
+   "start": "2026-10-11T11:30:00Z",
+   "end": "2026-10-11T11:45:00Z",
+   "drain_end": "2026-10-11T11:50:00Z",
+   "bot_tx_s": 625,
+   "build_tx_s": 1875,
+   "combined_tx_s": 2500,
+   "bot": "625",
+   "build": "1,875"
+  },
+  {
+   "step": "MAX",
+   "kind": "step",
+   "start": "2026-10-11T11:50:00Z",
+   "end": "2026-10-11T12:05:00Z",
+   "drain_end": "2026-10-11T12:10:00Z",
+   "bot_tx_s": 900,
+   "build_tx_s": 2600,
+   "combined_tx_s": 3500,
+   "bot": "900",
+   "build": "2,600 (may go above, never below)"
+  },
+  {
+   "step": "B1",
+   "kind": "baseline",
+   "start": "2026-10-11T12:10:00Z",
+   "end": "2026-10-11T12:20:00Z",
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "No load",
+   "build": "No load"
+  },
+  {
+   "step": "HOLD",
+   "kind": "hold",
+   "start": "2026-10-11T12:20:00Z",
+   "end": "2026-10-11T17:45:00Z",
+   "drain_end": null,
+   "bot_tx_s": 800,
+   "build_tx_s": 2400,
+   "combined_tx_s": 3200,
+   "bot": "800 (see the hold rule)",
+   "build": "2,400 (see the hold rule)"
+  },
+  {
+   "step": "DRAIN",
+   "kind": "drain",
+   "start": "2026-10-11T17:45:00Z",
+   "end": "2026-10-11T18:00:00Z",
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Senders 0",
+   "build": "Senders 0"
+  },
+  {
+   "step": "END",
+   "kind": "end",
+   "start": "2026-10-11T18:00:00Z",
+   "end": null,
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Senders stop. Miner off. Live loggers stop.",
+   "build": "Senders stop. Miner off. Live loggers stop. Node stays up."
+  },
+  {
+   "step": "COUNT",
+   "kind": "count",
+   "start": "2026-10-11T18:00:00Z",
+   "end": "2026-10-11T20:00:00Z",
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Chain count from n2, before pruning",
+   "build": "Chain count from your desk node, before pruning"
+  },
+  {
+   "step": "PUSH",
+   "kind": "push",
+   "start": null,
+   "end": "2026-10-11T21:00:00Z",
+   "drain_end": null,
+   "bot_tx_s": 0,
+   "build_tx_s": 0,
+   "combined_tx_s": 0,
+   "bot": "Logs to `logs/bot/`",
+   "build": "Logs to `logs/build/`, plus `FOR-TN10-OPS-result-1011.txt` to stp"
+  }
+ ]
+}

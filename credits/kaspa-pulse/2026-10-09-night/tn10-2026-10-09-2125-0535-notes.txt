@@ -1,0 +1,56 @@
+TN10 night run, 9 to 10 Oct 2026, 21:25 to 05:35 UTC
+Counted by Kaspa Pulse for STP. Private. Nothing public before you say yes. Our count = transactions accepted in blocks, per UTC
+minute, on two independent nodes. All 490 minutes are confirmed by both nodes. Two minutes were recounted afterwards (00:45
+and 04:12) and are corrected in the CSV.
+
+The short version
+•    Everything you pushed until 01:28 landed. 7,541,103 tx accepted in blocks over the night, 6,607,409 of them in the load window
+     22:00 to 01:28 (mean 526.9 tx/s).
+•    Highest minute 00:47 UTC, 1,223 tx/s. That is what arrived, not a network limit. Blocks never filled up, the rate followed your
+     senders step by step.
+•    The chain never stalled. 493 to 716 blocks per minute all night, 9.92 blocks/s on average, longest gap between blocks 1.13 s.
+•    Miners-off worked. Your mined blocks are 0 from 22:01 to 22:24, the network kept producing blocks at 9.2 per second without you.
+•    Your chain count and ours agree. Over the 238 minutes where your count is valid, yours is 1.2 % higher in sum (median per
+     minute 3.5 %).
+•    At 01:28 locus stopped. From there the chain shows base load only (55 tx/s) until the end.
+
+Step by step, from the chain
+Step (your steps.csv)         UTC                         Accepted in blocks, tx/s   Blocks per min              Your mined blocks per min
+C3 baseline                   21:30 to 21:39              59                         562                         45
+2x                            21:40 to 21:54              56                         560                         81
+2x miners off                 22:05 to 22:19              75                         552                         0
+5x                            22:30 to 22:44              207                        628                         123
+10x                           22:50 to 23:04              398                        614                         120
+20x                           23:10 to 23:24              809                        558                         108
+30x                           23:30 to 23:44              963                        544                         118
+max                           23:50 to 00:04              75                         664                         133
+B1                            00:15 to 00:24              104                        620                         116
+hold, live part               00:25 to 01:27              1,055                      585                         117
+hold, after locus stopped     01:29 to 04:44              55                         597                         0
+
+The max step shows no senders in your log and base load on the chain. If max was meant to run, it did not. The hold from 00:25 is
+the highest sustained load of the night.
+
+Block rate under load
+In the 87 minutes above 800 tx/s, blocks came at 9.55 per second against 9.93 in quiet minutes. Each block carried 109.6 tx on
+average in those minutes. Correlation between load and block rate over the night is minus 0.25 (midday run 9 Oct was plus 0.58). A
+small dip, no stall, and not enough data to call it a limit.
+About half of all blocks (49.7 %) carried only the coinbase. The network was far from full.
+
+Two things for you to check
+1. From 01:28 your stp_sent jumps from about 48,000 to about 1.05 million per minute, for 196 minutes until 04:44, while the chain
+shows base load only and your chain count is marked invalid. It looks like the senders kept firing at a dead locus and counted failed
+submits as sent. Worth a look before anyone reads that column as load.
+2. The mining address in the plan produced blocks only from 21:27 to 21:31. Your mined_blocks column shows you mining until
+01:28. Can you send us your actual payout address privately? Then we can show your mining share per step from the chain.
+
+Limits of this count
+•    We count what lands in blocks. What was sent but never accepted is only in your logs.
+•    The mempool on our nodes and yours disagree after 01:30 (about 2,880 against about 200). We do not use mempool numbers for
+     any conclusion here.
+•    05:35 to 06:30 we kept counting, base load only. Not in the CSV.
+
+Files
+•    tn10-2026-10-09-2125-0535-accepted-per-minute.csv, our count per minute
+•    tn10-2026-10-09-2125-0535-side-by-side.csv, your steps and counts next to ours
+

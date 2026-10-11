@@ -151,7 +151,7 @@ The bot cannot see your screen. stp carries two plain-text files from you to the
 1. **END (20:00 CEST):** senders stop, miner off, live loggers stop. Your desk node stays up.
 2. **COUNT (20:00 to 22:00 CEST):** write `chain-count.csv` from your node per minute from one hour before T0 to END, before pruning.
 3. Write `steps.csv`, `SUMMARY.md` and the result handoff file.
-4. **By PUSH (23:00 CEST):** commit your files to `logs/build/` in **STP-KAS/tn10-run-2026-10-11**. Counts only. No force-push. No tags or releases.
+4. **By PUSH (23:00 CEST):** commit your files to `logs/build/` in **STP-KAS/tn10-storm-2026-10-11-draft**. Counts only. No force-push. No tags or releases.
 5. **Make public (the bot's task):** after the run, once the logs are on GitHub, TN10 ops makes this repo public. Until then it stays private.
 
 ## Never

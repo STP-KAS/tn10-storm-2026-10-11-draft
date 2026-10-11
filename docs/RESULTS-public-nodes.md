@@ -2,7 +2,7 @@
 
 # The afternoon public-node test, Sat 10 Oct 2026, 14:23 to 16:18 CEST
 
-Back to [README](../README.md). Full report and data: [tn10-storm-1010-public-nodes](https://github.com/STP-KAS/tn10-storm-1010-public-nodes) (private, [REPORT.md](https://github.com/STP-KAS/tn10-storm-1010-public-nodes/blob/main/REPORT.md)). Bot senders only; Build sent to the same five public nodes at the same time, so network counts were combined.
+Back to [README](../README.md). Full report and data: [tn10-storm-1010-public-nodes](https://github.com/STP-KAS/tn10-storm-2026-10-10-public-nodes) (private, [REPORT.md](https://github.com/STP-KAS/tn10-storm-2026-10-10-public-nodes/blob/main/REPORT.md)). Bot senders only; Build sent to the same five public nodes at the same time, so network counts were combined.
 
 | What | Value | Label |
 |---|---|---|

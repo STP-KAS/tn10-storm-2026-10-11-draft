@@ -8,7 +8,7 @@ Thank you, Kaspa Pulse ([@gokugalax](https://x.com/gokugalax)). The node-dead ru
 
 This page is the rule book. The two prompts are [bot-run/GO-BOT-RUN.md](bot-run/GO-BOT-RUN.md) and [build-run/GO-BUILD-RUN.md](build-run/GO-BUILD-RUN.md). Each prompt carries the same timeline and the same rates, so each side can run from its own prompt alone. Logging is [LOGGING.md](LOGGING.md). If two files here disagree on a number, the numbers in [clock.py](clock.py) win; tell stp, do not pick one silently.
 
-**Written 10 Oct 2026, 18:53 CEST, by stp's order:** "make already a new github and plan based on same structure … start run tomorrow local 12h … write now already but change after test run 1010." It copies the rule book of run 2026-10-10 ([tn10-storm-1010](https://github.com/STP-KAS/tn10-storm-1010), written 17:43 CEST and changed 18:18 CEST) with a new clock: T0 12:00 CEST Sun 11 Oct. After run 2026-10-10 ends, this page is updated with what went wrong and what to improve ([LESSONS-from-2026-10-10.md](../docs/LESSONS-from-2026-10-10.md)).
+**Written 10 Oct 2026, 18:53 CEST, by stp's order:** "make already a new github and plan based on same structure … start run tomorrow local 12h … write now already but change after test run 1010." It copies the rule book of run 2026-10-10 ([tn10-storm-1010](https://github.com/STP-KAS/tn10-storm-2026-10-10), written 17:43 CEST and changed 18:18 CEST) with a new clock: T0 12:00 CEST Sun 11 Oct. After run 2026-10-10 ends, this page is updated with what went wrong and what to improve ([LESSONS-from-2026-10-10.md](../docs/LESSONS-from-2026-10-10.md)).
 
 ## Goals
 

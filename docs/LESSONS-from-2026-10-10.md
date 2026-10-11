@@ -20,7 +20,7 @@ Back to [README](../README.md). Older lessons: [LESSONS.md](LESSONS.md). The rul
 
 ## TODO after run 2026-10-10 ends
 
-Filled after END (04:30 CEST Sun 11 Oct / 02:30 UTC) and the chain count (to 06:30 CEST), from the logs in [tn10-storm-1010](https://github.com/STP-KAS/tn10-storm-1010) (to become `tn10-run-2026-10-10`). Then the GO files, [go/README.md](../go/README.md) and [go/clock.py](../go/clock.py) are updated, the DRAFT banners come off, and stp sends the GO.
+Filled after END (04:30 CEST Sun 11 Oct / 02:30 UTC) and the chain count (to 06:30 CEST), from the logs in [tn10-storm-1010](https://github.com/STP-KAS/tn10-storm-2026-10-10) (to become `tn10-run-2026-10-10`). Then the GO files, [go/README.md](../go/README.md) and [go/clock.py](../go/clock.py) are updated, the DRAFT banners come off, and stp sends the GO.
 
 - [ ] **Headline:** network unique accepted per step (median), HOLD median, success line met or not.
 - [ ] **What went wrong:** every `deviation`, node death, n2 restart, fallback, sit-out, with CEST time and cause.

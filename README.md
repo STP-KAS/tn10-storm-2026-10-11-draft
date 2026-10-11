@@ -1,6 +1,8 @@
 > **DRAFT — will be updated after run 2026-10-10 (what went wrong, improvements).** Written Sat 10 Oct 2026, 18:53 CEST, by stp's order, while run 2026-10-10 (T0 20:30 CEST) is still ahead. Nothing here is locked until that update lands. [Lessons so far](docs/LESSONS-from-2026-10-10.md)
 >
 > **Experimental. We are just trying this.** [Disclaimer](DISCLAIMER.md)
+>
+> **Archived on 11 Oct 2026 (read-only, nothing deleted):** draft for 11 Oct that was never run; replaced by the run repo. See [tn10-storm-2026-10-11](https://github.com/STP-KAS/tn10-storm-2026-10-11). Renamed from `tn10-run-2026-10-11`. Map of every storm: [tn-master](https://github.com/STP-KAS/tn-master).
 
 # tn10-run-2026-10-11: the bot run and the build run
 
@@ -34,8 +36,8 @@
 | [credits/](credits/KASPA-PULSE.md) | Kaspa Pulse's inputs, with sources and what we changed |
 | [credits/kaspa-pulse/](credits/kaspa-pulse/) | Kaspa Pulse's own counts |
 | [credits/kaspa-pulse/2026-10-09-night/](credits/kaspa-pulse/2026-10-09-night/README.md) | His count of the 9 Oct night storm (CSV, notes) |
-| [tn10-storm-1010](https://github.com/STP-KAS/tn10-storm-1010) (to become `tn10-run-2026-10-10`) | Run 2026-10-10, the bot run and the build run, T0 20:30 CEST (private) |
-| [tn10-storm-1010-public-nodes](https://github.com/STP-KAS/tn10-storm-1010-public-nodes) (to become `tn10-run-2026-10-10-public-nodes`) | The 10 Oct afternoon public-node test, report and data (private) |
+| [tn10-storm-1010](https://github.com/STP-KAS/tn10-storm-2026-10-10) (to become `tn10-run-2026-10-10`) | Run 2026-10-10, the bot run and the build run, T0 20:30 CEST (private) |
+| [tn10-storm-1010-public-nodes](https://github.com/STP-KAS/tn10-storm-2026-10-10-public-nodes) (to become `tn10-run-2026-10-10-public-nodes`) | The 10 Oct afternoon public-node test, report and data (private) |
 | [Kaspa Pulse (@gokugalax)](https://x.com/gokugalax) | The outside counter who shaped this plan |
 
 ## Intro

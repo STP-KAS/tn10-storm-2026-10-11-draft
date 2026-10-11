@@ -26,11 +26,11 @@ Back to [README](../README.md). **Written 10 Oct 2026, 18:53 CEST, by stp's orde
 | [tn10-build-desk-tps](https://github.com/STP-KAS/tn10-storm-2026-10-06) | public | Build desk runs, 6–7 Oct: short windows, long holds, fee-400 window | 2026-10-06 | `tn10-run-2026-10-06-build-desk` |
 | [tn10-gusto-20261002](https://github.com/STP-KAS/tn10-storm-2026-10-02-ramp) | private | Full-gusto ramp findings | 2026-10-02 | `tn10-run-2026-10-02-gusto-ramp` |
 | [tn10-gusto-ledger](https://github.com/STP-KAS/tn10-storm-2026-10-02-ledger) | private | Full-gusto spend ramp notes | 2026-10-02 | `tn10-run-2026-10-02-gusto-ledger` |
-| [tn10-full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02) | private | Operation full gusto findings | 2026-10-02 | `tn10-run-2026-10-02-full-gusto` |
+| [tn10-full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02-public) | private | Operation full gusto findings | 2026-10-02 | `tn10-run-2026-10-02-full-gusto` |
 | [full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02-match) | private | Full gusto hosted tic-tac-toe match notes | 2026-10-02 | `tn10-run-2026-10-02-full-gusto-match` |
-| [tn10-storm-2026-10-analysis](https://github.com/STP-KAS/tn10-storm-2026-10-01-analysis) | private | 24 h storm through n0, 1–2 Oct: raw data + analysis | 2026-10-01 | `tn10-run-2026-10-01-analysis` |
+| [tn10-storm-2026-10-analysis](https://github.com/STP-KAS/tn10-storm-2026-10-01-analysis-public) | private | 24 h storm through n0, 1–2 Oct: raw data + analysis | 2026-10-01 | `tn10-run-2026-10-01-analysis` |
 | [tn10-storm-2026-10-public-report](https://github.com/STP-KAS/tn10-storm-2026-10-01) | public | Public report of the 1–3 Oct storm | 2026-10-01 | `tn10-run-2026-10-01-public-report` |
-| [tn10-stress-tests](https://github.com/STP-KAS/tn10-storm-2026-10-01-reports) | private | Box report and the 1 Oct desk storm prompt | 2026-10-01 | `tn10-run-2026-10-01-stress-reports` |
+| [tn10-stress-tests](https://github.com/STP-KAS/tn10-storm-2026-10-01-reports-public) | private | Box report and the 1 Oct desk storm prompt | 2026-10-01 | `tn10-run-2026-10-01-stress-reports` |
 
 ## B. TN10 repos that are not runs (rename after run 2026-10-10)
 
@@ -63,8 +63,8 @@ Most of these are public and linked from outside. The rule applies, but stp conf
 | [vprogs-tn-desk](https://github.com/STP-KAS/tn10-storm-2026-09-25-vprogs-desk-private) | private | SilverScript/vprogs desk note, 25–26 Sep | 2026-09-25 | `tn10-2026-09-25-vprogs-desk` |
 | [vprogs-tn-desk-public](https://github.com/STP-KAS/tn10-storm-2026-09-25-vprogs-desk) | public | Its public clean copy | 2026-09-25 | `tn10-2026-09-25-vprogs-desk-public` |
 | [grok-bot-explorer-rewards-check](https://github.com/STP-KAS/tn10-storm-2026-09-26-explorer-check) | public | Explorer list frozen vs live mining rewards | 2026-09-26 | `tn10-2026-09-26-explorer-rewards-check` |
-| [grok-desk-tn10](https://github.com/STP-KAS/tn10-storm-2026-09-27-desk-miners) | private | Desk CPU miner test | 2026-09-27 | `tn10-run-2026-09-27-desk-miners` |
-| [tn10-grok](https://github.com/STP-KAS/tn10-storm-2026-09-18-mining) | private | TN10 stress journal from 18 Sep | 2026-09-18 (created) | `tn10-2026-09-18-journal` |
+| [grok-desk-tn10](https://github.com/STP-KAS/tn10-storm-2026-09-27-desk-miners-public) | private | Desk CPU miner test | 2026-09-27 | `tn10-run-2026-09-27-desk-miners` |
+| [tn10-grok](https://github.com/STP-KAS/tn10-storm-2026-09-18-mining-public) | private | TN10 stress journal from 18 Sep | 2026-09-18 (created) | `tn10-2026-09-18-journal` |
 | [tn10-hard-test](https://github.com/STP-KAS/tn10-hard-test) | public | Build's 14 Sep catalog of STP-KAS repos | 2026-09-14 | `tn10-2026-09-14-hard-test` |
 
 **Not in the map** (not TN10 run repos, names kept): the KNS repos (`kns-tn10-testing`, `kns-kasware-tn10-test`, `kns-kaspire-tn10-review`), `stillpay-tn10`, `vprog-runtime-test`, the kaspa-master, KCC, 1984 and site repos.

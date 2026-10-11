@@ -46,9 +46,9 @@ Numbers from different eras are not directly comparable.
 - **Source:** [tn10-hard-test](https://github.com/STP-KAS/tn10-hard-test).
 
 ### 18–21 Sep: farm mining stress
-- **Setup:** a dedicated TN10 kaspad with up to 150 one-thread CPU miners. Desk CPU miners from 27 Sep ([grok-desk-tn10](https://github.com/STP-KAS/tn10-storm-2026-09-27-desk-miners), private).
+- **Setup:** a dedicated TN10 kaspad with up to 150 one-thread CPU miners. Desk CPU miners from 27 Sep ([grok-desk-tn10](https://github.com/STP-KAS/tn10-storm-2026-09-27-desk-miners-public), private).
 - **Reported:** IBD stuck near 99% headers on one peer; `RouteIsFull` on block submits under farm load; one datadir lock panic. A tx rate: not found.
-- **Source:** [tn10-grok](https://github.com/STP-KAS/tn10-storm-2026-09-18-mining) (private); summary in the [mainnet-implications note §1](https://github.com/STP-KAS/tn10-storm-2026-10-01/blob/main/TN10-STORMS-MAINNET-IMPLICATIONS-2026-10-04.md).
+- **Source:** [tn10-grok](https://github.com/STP-KAS/tn10-storm-2026-09-18-mining-public) (private); summary in the [mainnet-implications note §1](https://github.com/STP-KAS/tn10-storm-2026-10-01/blob/main/TN10-STORMS-MAINNET-IMPLICATIONS-2026-10-04.md).
 - **Learned:** one node under farm load is fragile; mining load and tx load need separate watching.
 
 ## 25–26 Sep: the September storm, with vprogs
@@ -80,13 +80,13 @@ Numbers from different eras are not directly comparable.
 - **Setup:** index-free runners on n0; Build adding load from the desk through public nodes.
 - **Reported:** **58,905,910** box transactions included in four legs, 152 rejected, 361,814 tKAS fees. Best 1 min **4,253 tx/s**, best 10 min **3,717**, best 60 min **2,518**. Our block share 50–63% while the box miners ran.
 - **What broke:** public API lagged up to 11.7 min and froze about 85 min on the night of 2 Oct; each episode we saw end recovered within 2–5 min. n0 disk-full on 3 Oct.
-- **Source:** [tn10-storm-2026-10-public-report](https://github.com/STP-KAS/tn10-storm-2026-10-01); raw data and analysis in [tn10-storm-2026-10-analysis](https://github.com/STP-KAS/tn10-storm-2026-10-01-analysis) (private); [tn10-stress-tests](https://github.com/STP-KAS/tn10-storm-2026-10-01-reports) (private); local box notes (not on GitHub).
+- **Source:** [tn10-storm-2026-10-public-report](https://github.com/STP-KAS/tn10-storm-2026-10-01); raw data and analysis in [tn10-storm-2026-10-analysis](https://github.com/STP-KAS/tn10-storm-2026-10-01-analysis-public) (private); [tn10-stress-tests](https://github.com/STP-KAS/tn10-storm-2026-10-01-reports-public) (private); local box notes (not on GitHub).
 - **Learned:** "about 5k TPS" does not hold as unique included transactions. Label every mainnet sentence A/B/C ([note, 4 Oct](https://github.com/STP-KAS/tn10-storm-2026-10-01/blob/main/TN10-STORMS-MAINNET-IMPLICATIONS-2026-10-04.md)).
 
 ### 1–2 Oct: full gusto
 - **Setup:** desk wallet self-spend on one public node, avoiding public nodes whose mempools were over 100,000.
 - **Reported:** one snapshot at 08:19:59 UTC, 2 Oct: about **112 tx/s**, 0 rejected. A run total: not found.
-- **Source:** [tn10-gusto-20261002](https://github.com/STP-KAS/tn10-storm-2026-10-02-ramp), [tn10-gusto-ledger](https://github.com/STP-KAS/tn10-storm-2026-10-02-ledger), [tn10-full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02), [full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02-match) (all private).
+- **Source:** [tn10-gusto-20261002](https://github.com/STP-KAS/tn10-storm-2026-10-02-ramp), [tn10-gusto-ledger](https://github.com/STP-KAS/tn10-storm-2026-10-02-ledger), [tn10-full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02-public), [full-gusto](https://github.com/STP-KAS/tn10-storm-2026-10-02-match) (all private).
 - **Learned:** public mempools fill first; a private node is needed.
 
 ### 4 Oct: Kaspa Pulse's questions

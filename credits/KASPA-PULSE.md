@@ -50,4 +50,4 @@ The step-by-step table is in [history/2026-10-09-night.md](../history/2026-10-09
 
 ---
 
-Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+Si vis pacem, para bellum.

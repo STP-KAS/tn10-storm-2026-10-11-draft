@@ -132,4 +132,4 @@ Counts only: no txid, key, seed, host IP, port or wallet address in this repo. T
 
 ---
 
-Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+Si vis pacem, para bellum.
